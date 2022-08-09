@@ -192,7 +192,17 @@ function removerDoCarrinho(clique){
 
 function carrinhoQuantidade(array){
     let quantidade = document.querySelector(".quantidade")
+    let carrinhoVazio = document.querySelector(".carrinhoVazio") 
+    let carrinhoQuantidade = document.querySelector(".carrinhoQuantidade")
     quantidade.innerText = array.length
-
+    if(array.length == 0){
+        carrinhoVazio.style.display = "flex"
+        listaCarrinho.style.display = "none"
+        carrinhoQuantidade.style.display = "none"
+    }if(array.length != 0){
+        carrinhoVazio.style.display = "none"        
+        listaCarrinho.style.display = "flex"
+        carrinhoQuantidade.style.display = "flex"
+}
     return quantidade
 }

@@ -201,9 +201,9 @@ justify-content: space-between;
     margin-left: 10px;
 }
 
-.containerCarrinho ul {
+.setorCarrinho {
     list-style: none;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
@@ -212,7 +212,7 @@ justify-content: space-between;
     overflow-y: scroll;
 }
 
-.containerCarrinho ul li {
+.setorCarrinho li {
     border-radius: 8px;
     transition: ease-in-out 0.1s;
     width: 100%;
@@ -264,7 +264,10 @@ justify-content: space-between;
     transition: 0.5s;
     height: 40px;
     }
-
+.carrinhoQuantidade{
+    display: none;
+    flex-direction: column;
+}
 .priceContainer {
     display: flex;
     justify-content: space-between;
@@ -315,4 +318,11 @@ justify-content: space-between;
     font-style: normal;
     font-weight: 500;
     font-size: .8rem;
+}
+.carrinhoVazio{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
