@@ -120,9 +120,9 @@ const listaCarrinho = document.querySelector(".setorCarrinho")
 listaProdutos.addEventListener("click", adicionarAoCarrinho)
 let arrayCarrinho = []
 function adicionarAoCarrinho(clique){
-    listaCarrinho.innerHTML = ""
     let btnClique = clique.target
     if(btnClique.tagName === "BUTTON"){
+        listaCarrinho.innerHTML = ""
         let produto = btnClique.id
         produtos.forEach((element) => {
             if(produto == element.id){
@@ -174,13 +174,13 @@ function criarItemCarrinho(compra){
 
 listaCarrinho.addEventListener("click",removerDoCarrinho)
 function removerDoCarrinho(clique){
-    listaCarrinho.innerHTML = ""
     let btnClique = clique.target
     if(btnClique.tagName === "BUTTON"){
+        listaCarrinho.innerHTML = ""
         let produto = btnClique.id
         arrayCarrinho.forEach((element,i)=>{
             if(produto == element.id){
-                arrayCarrinho.splice(element,1)
+                arrayCarrinho.splice(element)
             }
         })
         criarItemCarrinho(arrayCarrinho)
