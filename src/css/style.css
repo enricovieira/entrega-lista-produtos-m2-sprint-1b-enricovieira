@@ -339,6 +339,7 @@ justify-content: space-between;
         background-color: #12b886;
         border: #12b886 1px solid;
         color: white;
+        cursor: pointer;
     } 
     .containerListaProdutos ul li div{
         padding: 5px;
@@ -351,5 +352,6 @@ justify-content: space-between;
         background-color: #12b886;
         color: #ffffff;
         transition: ease-in-out 0.2s;
+        cursor: pointer;
     }
 }
