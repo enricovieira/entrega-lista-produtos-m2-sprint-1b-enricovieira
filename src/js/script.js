@@ -180,7 +180,7 @@ function removerDoCarrinho(clique){
         let produto = btnClique.id
         arrayCarrinho.forEach((element,i)=>{
             if(produto == element.id){
-                arrayCarrinho.splice(i,1)
+                arrayCarrinho.splice(element,1)
             }
         })
         criarItemCarrinho(arrayCarrinho)

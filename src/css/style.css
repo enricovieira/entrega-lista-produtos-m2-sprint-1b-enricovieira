@@ -34,7 +34,6 @@ padding: 30px 0;
 display: flex;
 margin-bottom: 1rem;
 overflow-x: auto;
-
 }
 
 .estiloGeralBotoes {
@@ -47,12 +46,6 @@ font-weight: 500;
 color: #12b886;
 font-size: 0.9rem;
 margin-right: 10px;
-}
-
-.estiloGeralBotoes--filter:hover {
-background-color: #12b886;
-color: #ffffff;
-transition: ease-in-out 0.2s;
 }
 
 .botoesClickStyle {
@@ -115,14 +108,9 @@ border-radius: 8px;
 transition: ease-in-out 0.1s;
 margin-bottom: 30px;
 margin-right: 25px;
-height:100%;
+height: 100%;
 max-height: 250px;
 }
-
- /* .containerListaProdutos ul li:hover {
-box-shadow: 3px 3px 13px 1px rgb(146 146 146);
-} */
-
 
 .containerListaProdutos ul li h3 {
 font-size: 1rem;
@@ -163,23 +151,11 @@ color: #12b886;
 padding: 5px;
 transition: 0.5s;
 }
-/* .containerListaProdutos ul li button:hover {
-background-color: #12b886;
-border: #12b886 1px solid;
-color: white;
-} */
+
 .containerListaProdutos ul li div {
 display: flex;
 justify-content: space-between;
-/* padding: 5px; */
 }
-
-/* CONTAINER CARRINHO */
-/* .containerCarrinho{
-    background-color: #12b886;
-    border-radius: 8px;
-    width: 100%;
-} */
 
 .headerCarrinho{
     width: 100%;
@@ -325,4 +301,55 @@ justify-content: space-between;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width:820px){
+    main {
+        margin: 0 70px;
+        }
+    .filtersContainer {
+        flex-direction: row;
+    }
+    #botoesContainer{
+        overflow-x: hidden;
+    }
+    .estiloGeralBotoes--filter:hover {
+        background-color: #12b886;
+        color: #ffffff;
+        transition: ease-in-out 0.2s;
+    }
+    .containerVitrine{
+        flex-direction: row;
+    }
+    .containerListaProdutos ul{
+        flex-wrap: wrap;
+    }
+    .containerListaProdutos ul li{
+        max-height: 350px;
+    }
+
+    .containerListaProdutos ul li ol{
+        display: block;
+    }
+     .containerListaProdutos ul li:hover {
+        box-shadow: 3px 3px 13px 1px rgb(146 146 146);
+    } 
+
+    .containerListaProdutos ul li button:hover {
+        background-color: #12b886;
+        border: #12b886 1px solid;
+        color: white;
+    } 
+    .containerListaProdutos ul li div{
+        padding: 5px;
+    }
+    .setorCarrinho{
+        height: 280px;
+        justify-content: normal;
+    }
+    .containerCarrinho ul li button:hover{
+        background-color: #12b886;
+        color: #ffffff;
+        transition: ease-in-out 0.2s;
+    }
 }
