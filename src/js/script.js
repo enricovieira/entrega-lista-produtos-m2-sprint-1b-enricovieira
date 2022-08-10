@@ -137,7 +137,7 @@ function adicionarAoCarrinho(clique){
 
 function criarItemCarrinho(compra){
     let ul = document.querySelector(".setorCarrinho")
-    compra.forEach((element) => {
+    compra.forEach((element,i) => {
         let li = document.createElement("li")
         let carrinhoInfo = document.createElement("div")
         let containerImg = document.createElement("div")
@@ -156,7 +156,7 @@ function criarItemCarrinho(compra){
         h3.innerText = nomeProduto
         span.innerText = secaoProduto
         p.innerText = `R$${precoProduto}`
-        button.id = element.id
+        button.id = i
         button.innerText = "Remover"
         carrinhoInfo.classList = "carrinhoInfo"
         containerImg.classList = "containerImg"
@@ -179,7 +179,7 @@ function removerDoCarrinho(clique){
         listaCarrinho.innerHTML = ""
         let produto = btnClique.id
         arrayCarrinho.forEach((element,i)=>{
-            if(produto == element.id){
+            if(produto == i){
                 arrayCarrinho.splice(i,1)
             }
         })
