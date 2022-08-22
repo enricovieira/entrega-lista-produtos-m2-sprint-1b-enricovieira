@@ -72,17 +72,30 @@ function buscarItem(){
     criarCard(pesquisar)
 }
 
-function verificandoPesquisa(valor){
-    let resultadoBusca = []
-    let pesquisa = valor.trim().toLowerCase()
-    produtos.forEach((element) => {
-        if(element.nome.toLowerCase().includes(pesquisa) || element.secao.toLowerCase().includes(pesquisa) || element.categoria.toLowerCase().includes(pesquisa)){
-            resultadoBusca.push(element)
-        }else if(pesquisa === ""){
-            resultadoBusca = []
-        }
-    })
-    return resultadoBusca
+produtos.forEach((element) => {
+    if (
+      element.nome
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .includes(pesquisa) ||
+      element.secao
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .includes(pesquisa) ||
+      element.categoria
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .includes(pesquisa)
+    ) {
+      resultadoBusca.push(element);
+    } else if (pesquisa === "") {
+      resultadoBusca = [];
+    }
+  });
+  return resultadoBusca;
 }
 
 const secaoFiltro = document.querySelectorAll(".estiloGeralBotoes--filter")
